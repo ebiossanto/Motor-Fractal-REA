@@ -22,6 +22,14 @@ from typing import Optional
 if sys.platform == 'win32':
     sys.stdout.reconfigure(encoding='utf-8')
 
+# Módulo opcional de Rigidez Dinâmica (novo framework 2026)
+try:
+    from rigidez_dinamica import RigidezDinamica, verificar_teoremas_novas
+    RIGIDEZ_DINAMICA_DISPONIVEL = True
+except ImportError:
+    RIGIDEZ_DINAMICA_DISPONIVEL = False
+
+
 from hurst_calculator import FractalAnalyzer, compute_hurst_rs, compute_dfa, compute_hurst_dfa
 from pfa_mitigation import PFAMitigator
 from noise_filter import ObserverNoiseFilter
@@ -34,6 +42,10 @@ class FractalControlEngine:
     Avalia a assinatura fractal atual do sistema e prevê colapso
     por latência de cauda antes que a entropia informacional atinja
     o teto de saturação termodinâmica.
+
+    Atributos adicionais (2026):
+    - Integração com teoria de rigidez dinâmica (módulo rigidez_dinamica)
+    - Novos teoremas de limiares e conflitos estático/dinâmico
     """
 
     def __init__(self, controller_states: int = 6, system_states: int = 8):
@@ -97,26 +109,61 @@ class FractalControlEngine:
             prediction = "Tendências lineares previsíveis dominando o sistema"
             action = "Verificar gargalos de longo prazo"
 
-        # 4. Calcular recomendação de carga
+        # 4. Calcular recomendação de carga (com novo framework opcional)
         rho_c = self.mitigator.find_phase_transition()
-        recommendation = self.mitigator.recommend_controller(rho=0.5)  # Estimativa padrão
 
-        result = {
-            "timestamp_utc": datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
-            "hurst_exponent": round(H, 4),
-            "hurst_raw": round(H_raw, 4),
-            "hurst_dfa": round(H_dfa, 4),
-            "fractal_dimension": round(D_H, 4) if D_H else None,
-            "stability_status": status,
-            "predictive_analysis": prediction,
-            "recommended_action": action,
-            "observer_noise": {
-                "snr_db": round(filter_results['snr_db'], 2),
-                "correction_applied": round(filter_results['correction_applied'], 4)
-            },
-            "mitigation_recommendation": recommendation,
-            "sample_count": len(cpu_stream)
-        }
+        # Novo: Verificar rigidez dinâmica se módulo disponível
+        if RIGIDEZ_DINAMICA_DISPONIVEL:
+            # Verificar teoremas novos para o par (system_states, controller_states)
+            n = self.mitigator.n  # |S|
+            m = self.mitigator.m  # |Q|
+            teoremas = verificar_teoremas_novas(n, m)
+            recommendation = self.mitigator.recommend_controller(rho=0.5)
+            # Adicionar informações de rigidez ao resultado
+            result = {
+                "timestamp_utc": datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
+                "hurst_exponent": round(H, 4),
+                "hurst_raw": round(H_raw, 4),
+                "hurst_dfa": round(H_dfa, 4),
+                "fractal_dimension": round(D_H, 4) if D_H else None,
+                "stability_status": status,
+                "predictive_analysis": prediction,
+                "recommended_action": action,
+                "observer_noise": {
+                    "snr_db": round(filter_results['snr_db'], 2),
+                    "correction_applied": round(filter_results['correction_applied'], 4)
+                },
+                "mitigation_recommendation": recommendation,
+                "sample_count": len(cpu_stream),
+                "teorema_rigidez": teoremas["teorema_rigidez"],
+                "conflito_estatico_dinamico": teoremas["conflito_estatico_dinamico"]["descricao_curta"],
+                "erro_dinamico": teoremas["erro_dinamico_minimo"],
+                "melhoria_teorica": teoremas["melhoria"]
+            }
+        else:
+            # comportamento original quando módulo não disponível
+            # Incluir chave placeholder para compatibilidade com testes
+            recommendation = self.mitigator.recommend_controller(rho=0.5)
+            result = {
+                "timestamp_utc": datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
+                "hurst_exponent": round(H, 4),
+                "hurst_raw": round(H_raw, 4),
+                "hurst_dfa": round(H_dfa, 4),
+                "fractal_dimension": round(D_H, 4) if D_H else None,
+                "stability_status": status,
+                "predictive_analysis": prediction,
+                "recommended_action": action,
+                "observer_noise": {
+                    "snr_db": round(filter_results['snr_db'], 2),
+                    "correction_applied": round(filter_results['correction_applied'], 4)
+                },
+                "mitigation_recommendation": recommendation,
+                "sample_count": len(cpu_stream),
+                "teorema_rigidez": {"satisfaz": False, "mensagem": "Módulo rigidez_dinamica nao disponivel"},
+                "conflito_estatico_dinamico": "Módulo rigidez_dinamica nao disponivel",
+                "erro_dinamico": 0.0,
+                "melhoria_teorica": "Módulo rigidez_dinamica nao disponivel - use python scripts/rigidez_dinamica.py para ativar"
+            }
 
         self.history.append(result)
         return result
