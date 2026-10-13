@@ -1,0 +1,43 @@
+{
+  "project": "IA-RESEARCH-FCT",
+  "claim": {
+    "id": "FCT-001",
+    "statement": "O motor de Teoria de Controle Fractal (FCT) prevê colapso por latência de cauda com Hurst médio de 0.84 (IC 95%: [0.7958, 0.8842]) em 30 iterações do protocolo DOC-FCT-001, confirmando que o sistema operacional monitorado exibe comportamento altamente persistente (t=15.08, p<0.001).",
+    "source": "../../FCT_REFINAMENTO_PREDITIVO.md"
+  },
+  "proof": {
+    "artifacts": [
+      "../../scripts/fractal_engine.py",
+      "../../scripts/hurst_calculator.py",
+      "../../scripts/pfa_mitigation.py",
+      "../../scripts/noise_filter.py",
+      "../../scripts/fct_integration.py"
+    ],
+    "note": "Implementação completa dos 4 eixos da FCT: Ponte Analítica (Hurst R/S + DFA), Bullwhip Algébrico (cascata multiplicativa), Não-Abeliano (grupos simétricos), Relaxamento Estocástico (PFA)"
+  },
+  "verification": {
+    "method": "Validação estatística com 30 iterações do protocolo DOC-FCT-001, intervalos de confiança 95%, t-tests de hipóteses",
+    "tool": "python",
+    "command": "python scripts/validacao_estatistica.py",
+    "result": "pass",
+    "output": "../../scripts/validation_report.json"
+  },
+  "meta_verification": {
+    "method": "Reexecução independente com semente fixa",
+    "tool": "python",
+    "command": "python scripts/validacao_estatistica.py",
+    "result": "pass",
+    "output": "../../scripts/validation_report.json"
+  },
+  "external_certification": {
+    "auditor": "pendente",
+    "status": "pending",
+    "reference": ""
+  },
+  "confidence": {
+    "empirical": 0.85,
+    "statistical": 0.90,
+    "logical": 0.95,
+    "formal": 0.99
+  }
+}

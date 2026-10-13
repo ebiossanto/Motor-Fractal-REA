@@ -1,0 +1,85 @@
+{
+  "validation_id": "VAL_20261012_234957",
+  "timestamp_utc": "2026-10-12T23:49:57.987098Z",
+  "num_iterations": 30,
+  "confidence_level": 0.95,
+  "statistics": {
+    "hurst_values": {
+      "count": 30,
+      "mean": 0.7686,
+      "std": 0.1263,
+      "min": 0.4925,
+      "max": 1.0,
+      "ci_low": 0.7234,
+      "ci_high": 0.8138,
+      "ci_level": 0.95
+    },
+    "dfa_inflation": {
+      "count": 30,
+      "mean": 1.0051,
+      "std": 0.0,
+      "min": 1.0051,
+      "max": 1.0051,
+      "ci_low": 1.0051,
+      "ci_high": 1.0051,
+      "ci_level": 0.95
+    },
+    "pfa_inflation": {
+      "count": 30,
+      "mean": 1.0002,
+      "std": 0.0,
+      "min": 1.0002,
+      "max": 1.0002,
+      "ci_low": 1.0002,
+      "ci_high": 1.0002,
+      "ci_level": 0.95
+    },
+    "snr_values": {
+      "count": 30,
+      "mean": -10.0842,
+      "std": 31.2858,
+      "min": -100.0,
+      "max": 13.4183,
+      "ci_low": -21.2797,
+      "ci_high": 1.1113,
+      "ci_level": 0.95
+    },
+    "permutation_entropy": {
+      "count": 30,
+      "mean": 0.9552,
+      "std": 0.0252,
+      "min": 0.8988,
+      "max": 0.989,
+      "ci_low": 0.9462,
+      "ci_high": 0.9642,
+      "ci_level": 0.95
+    }
+  },
+  "hypothesis_tests": {
+    "dfa_vs_pfa": {
+      "test": "t-test pareado",
+      "hypothesis": "H0: inflação DFA = inflação PFA",
+      "mean_difference": 0.004944,
+      "t_statistic": 0,
+      "p_value_approx": "> 0.05",
+      "conclusion": "Sem diferença significativa"
+    },
+    "hurst_persistence": {
+      "test": "t-test uma amostra",
+      "hypothesis": "H0: H = 0.5 (ruído branco)",
+      "mean_hurst": 0.7686,
+      "t_statistic": 11.6466,
+      "p_value_approx": "< 0.001",
+      "conclusion": "Sistema significativamente persistente"
+    },
+    "confidence_spectrum": {
+      "rho_empirical": 0.9,
+      "beta_statistical": 0.95,
+      "gamma_logical": 0.9,
+      "delta_formal": 0.99,
+      "order_respected": false,
+      "conclusion": "Violação do espectro"
+    }
+  },
+  "conclusion": "Sistema altamente persistente"
+}

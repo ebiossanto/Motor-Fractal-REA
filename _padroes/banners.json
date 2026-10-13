@@ -1,0 +1,68 @@
+{
+  "IA-research-Godel-e-Krajicek": {
+    "title": "Gödel & Krajíček",
+    "subtitle": "Incompletude, Complexidade de Provas e a Hierarquia Ordinal de Beklemishev",
+    "formula": "2^τ ⊣ Well-orders ↦ Provability ↦ Slow consistency",
+    "tags": ["Proof Complexity", "Gödel", "Lean 4", "Krajíček"]
+  },
+  "IA-RESEARCH-Logica": {
+    "title": "Lógica",
+    "subtitle": "Incompletude — Falha de Colagem — Espectro de Limiares de Prova",
+    "formula": "ρ_T ↦ B_T ↦ C_T ↦ R_T ↦ g_T^[b]",
+    "tags": ["Krajíček", "Gödel", "Geradores Limitados", "Proof Theory"]
+  },
+  "IA-RESEARCH-DELTA-H": {
+    "title": "Gap Topológico Narrativo (ΔT)",
+    "subtitle": "Validação Empírica da Estrutura Semântica Global e Compreensão de Leitores",
+    "formula": "ΔT = d_H( G_whole , G_window[r] )",
+    "tags": ["TDA", "Persistent Homology", "Embeddings", "NLP"]
+  },
+  "IA-RESEARCH-QESCUDO-NR12": {
+    "title": "Q-ESCUDO",
+    "subtitle": "Quantum-Enhanced Safety Counterfactual & Diagnostic Oracle",
+    "formula": "P(configuração | evento-topo) via Grover ponderado",
+    "tags": ["Quantum", "Safety", "NR-12", "Fault Tree"]
+  },
+  "IA-RESEARCH-MUTARIC": {
+    "title": "MUTARIC · ricemotions",
+    "subtitle": "Ponte PIXEL/RIC ↔ TEOA: emoção escrita em pixels e resíduo de Landauer",
+    "formula": "E = kT·ln2 · H(pixel)  ⇒  valência + ativação",
+    "tags": ["Landauer", "TEOA", "Glifos", "Agência"]
+  },
+  "IA-Research-Quantum-Local-Packing": {
+    "title": "Quantum Local Packing",
+    "subtitle": "Exact Solutions via the Resultant Method",
+    "formula": "P_G(c) = Res_minors( Gram(G,d) ) = 0  ⇒  c_opt",
+    "tags": ["Semidefinite", "Gram Matrix", "Resultants", "Graphs"]
+  },
+  "IA-Research-Cost-of-Equivariance": {
+    "title": "The Cost of Equivariance",
+    "subtitle": "Finite-State Tracking of the Hypercube",
+    "formula": "R = E_equiv / E_free ≥ 1   iff   k = 2^(n−1)",
+    "tags": ["Hypercube", "Equivariance", "Control", "Bit Error"]
+  },
+  "IA-Research-Desafio-Criptogr-fico": {
+    "title": "SPECTRUM-1024",
+    "subtitle": "Desafio Criptográfico Público — Cifras de Bloco de 1024 bits",
+    "formula": "1024-bit permutation · 256-bit key · 12 rounds",
+    "tags": ["Criptoanálise", "SPN", "Euler-Rivest", "GF(29)"]
+  },
+  "IA-RESEARCH-NFT-CONTAINER": {
+    "title": "AI Model NFT Container",
+    "subtitle": "Governança e Licenciamento Descentralizado de Modelos de IA via dNFTs",
+    "formula": "License(model, context) → dNFT → sandbox isolado",
+    "tags": ["dNFT", "Web3", "Licensing", "SGX"]
+  },
+  "IA-RESEARCH-PESQUISA-ASSISTIDA": {
+    "title": "Pesquisa Assistida por IA",
+    "subtitle": "Ementa acadêmica, documento explicativo e dossiê de apresentação",
+    "formula": "DOMINAR → PREPARAR → SELECIONAR → INVESTIGAR",
+    "tags": ["Ementa", "Ensino Superior", "IA Generativa", "Metodologia"]
+  },
+  "IA-RESEARCH-REINO-DIGITAL-BRIEF": {
+    "title": "REINO DIGITAL · Brief",
+    "subtitle": "Pacote não confidencial: brief, dossiê executivo, pitch e deck",
+    "formula": "protocolo RNP — presença territorial por nós de rede",
+    "tags": ["Brief", "Pitch", "Não confidencial", "10 slides"]
+  }
+}

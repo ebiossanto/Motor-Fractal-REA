@@ -1,0 +1,4 @@
+experiment_id,test_type,timestamp_utc,data_hash,data_json
+FCT_20261012_224217,TEST_I,2026-10-12T22:42:27.398948Z,f6cccb72a8c2aac2,"{""hops"": 5, ""base_load"": 0.7, ""dfa_inflation"": 1.8543, ""pfa_inflation"": 1.9643, ""hurst"": 0.7347, ""status"": ""HIGHLY_PERSISTENT_STATE""}"
+FCT_20261012_224249,TEST_I,2026-10-12T22:42:59.963834Z,0ef7df720d562972,"{""hops"": 5, ""base_load"": 0.7, ""dfa_inflation"": 1.8543, ""pfa_inflation"": 1.9643, ""hurst"": 0.6377, ""status"": ""NOMINAL_FRACTAL_STABILITY""}"
+FCT_20261012_224249,TEST_II,2026-10-12T22:43:05.005093Z,bfc89b7b1310b351,"{""layers"": 3, ""permutation_entropy"": 0.2103, ""hurst"": 1.2526, ""dfa_alpha"": -1.5476, ""obstructions_detected"": 2}"

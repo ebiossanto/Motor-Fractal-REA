@@ -1,0 +1,6 @@
+timestamp_utc,data_source,metric_type,sample_size,entropy_value,confidence_score
+2026-10-12T20:38:42.475002Z,psutil.cpu_percent (Global OS Kernel Space),shannon_entropy_cpu,100,1.6598,0.95
+2026-10-12T20:39:25.868235Z,psutil.cpu_percent (Global OS Kernel Space),shannon_entropy_cpu,100,2.1923,0.95
+2026-10-12T20:40:53.583124Z,psutil.cpu_percent (Global OS Kernel Space),shannon_entropy_cpu,100,3.1269,0.95
+2026-10-12T20:53:30.602717Z,psutil.cpu_percent (Global OS Kernel Space),shannon_entropy_cpu,300,3.9499,0.95
+2026-10-12T20:55:12.302171Z,psutil.cpu_percent (Global OS Kernel Space),shannon_entropy_cpu,300,3.6351,0.95

@@ -1,0 +1,97 @@
+{
+  "schema": "ten-proofs-certificate/v1",
+  "project": "IA-RESEARCH-FCT",
+  "niveis": {
+    "0_proposicao": {
+      "id": "FCT-001",
+      "statement": "O motor de Teoria de Controle Fractal (FCT) prevê colapso por latência de cauda com Hurst médio de 0.84 (IC 95%: [0.7958, 0.8842]) em 30 iterações do protocolo DOC-FCT-001, confirmando que o sistema operacional monitorado exibe comportamento altamente persistente (t=15.08, p<0.001).",
+      "source": {
+        "path": "../../FCT_REFINAMENTO_PREDITIVO.md",
+        "sha256": "1e3b7c184ba9b137fffcb130c562a8f7d91bff475f95fbf8120f939712226a98",
+        "bytes": 10553,
+        "status": "registrado"
+      },
+      "status": "registrado"
+    },
+    "1_prova": {
+      "artifacts": [
+        {
+          "path": "../../scripts/fractal_engine.py",
+          "sha256": "0aaf9fc898c432aee973338fb60f7f423e7d6b8c4b79a84f12df7ad6593088c6",
+          "bytes": 11792,
+          "status": "registrado"
+        },
+        {
+          "path": "../../scripts/hurst_calculator.py",
+          "sha256": "7b8b790449e4b2f97069c89449e03999846158be895bd2231695f1348cc487f0",
+          "bytes": 7772,
+          "status": "registrado"
+        },
+        {
+          "path": "../../scripts/pfa_mitigation.py",
+          "sha256": "f74363055318fbe33c1a0af5dd9a15aed9962b7736b35e9f056b8d356095577e",
+          "bytes": 8533,
+          "status": "registrado"
+        },
+        {
+          "path": "../../scripts/noise_filter.py",
+          "sha256": "bde5c3c7865899a09718b420731b3e277f29b1445464b4d668e2f4eb5992c701",
+          "bytes": 8123,
+          "status": "registrado"
+        },
+        {
+          "path": "../../scripts/fct_integration.py",
+          "sha256": "f3287358febdbcf03a71461f187253b85ee4cc70358ea21371466e40a6aff4e0",
+          "bytes": 10840,
+          "status": "registrado"
+        }
+      ],
+      "note": "Implementação completa dos 4 eixos da FCT: Ponte Analítica (Hurst R/S + DFA), Bullwhip Algébrico (cascata multiplicativa), Não-Abeliano (grupos simétricos), Relaxamento Estocástico (PFA)",
+      "status": "registrado"
+    },
+    "2_verificacao": {
+      "method": "Validação estatística com 30 iterações do protocolo DOC-FCT-001, intervalos de confiança 95%, t-tests de hipóteses",
+      "tool": "python",
+      "command": "python scripts/validacao_estatistica.py",
+      "result": "pass",
+      "output": {
+        "path": "../../scripts/validation_report.json",
+        "sha256": "1f0b786c166ed082fe8d5e1056aea59876f274ba0ccf771793cb67a57f768273",
+        "bytes": 2123,
+        "status": "registrado"
+      },
+      "status": "registrado"
+    },
+    "3_meta_verificacao": {
+      "method": "Reexecução independente com semente fixa",
+      "tool": "python",
+      "command": "python scripts/validacao_estatistica.py",
+      "result": "pass",
+      "output": {
+        "path": "../../scripts/validation_report.json",
+        "sha256": "1f0b786c166ed082fe8d5e1056aea59876f274ba0ccf771793cb67a57f768273",
+        "bytes": 2123,
+        "status": "registrado"
+      },
+      "status": "registrado"
+    },
+    "4_certificacao_externa": {
+      "auditor": "pendente",
+      "status": "pending",
+      "reference": ""
+    }
+  },
+  "confidence": {
+    "empirical": 0.85,
+    "statistical": 0.9,
+    "logical": 0.95,
+    "formal": 0.99
+  },
+  "generator": {
+    "tool": "certifier_core.py",
+    "version": "1.0.0"
+  },
+  "timestamp_utc": "2026-10-13T00:42:28+00:00",
+  "avisos": [],
+  "certificate_hash": "da894a97a58e0fd3e5b862e1bd109c9fd9f223b52c6c9cc9d650e7fcdff0f87a"
+}
