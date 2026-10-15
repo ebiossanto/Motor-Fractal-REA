@@ -1,0 +1,93 @@
+{
+  "schema": "ten-proofs-certificate/v1",
+  "project": "IA-RESEARCH-FCT",
+  "niveis": {
+    "0_proposicao": {
+      "id": "FCT-ADV-004",
+      "statement": "Box-dim com bins adaptativos (quantis): 5/6 combinacoes resgatadas com D finito e R2>=0.9 (raw 1D 0.86/2D 1.65, donoho 2D 1.24, tail 0.77/1.04); donoho-1D D=1.0/R2=1.0 exatos = saturacao trivial, nao medicao; D2 reabilitado como auxiliar onde resgatado, segue so-H onde nao.",
+      "source": {
+        "path": "formal-certification/experiments/fct_boxdim_adaptive.py",
+        "sha256": "7044969caa00b14231179e0455029ce09929a301243b6a6ca30e37e8011760ff",
+        "bytes": 5978,
+        "status": "registrado"
+      },
+      "status": "registrado"
+    },
+    "1_prova": {
+      "artifacts": [
+        {
+          "path": "formal-certification/experiments/fct_boxdim_adaptive.py",
+          "sha256": "7044969caa00b14231179e0455029ce09929a301243b6a6ca30e37e8011760ff",
+          "bytes": 5978,
+          "status": "registrado"
+        },
+        {
+          "path": "formal-certification/experiments/out_boxdim_adaptive.json",
+          "sha256": "c27527725fbdf20de0e1487ed916d05bf2e5e53d5b8190546564446bfeeee54d",
+          "bytes": 1515,
+          "status": "registrado"
+        },
+        {
+          "path": "formal-certification/experiments/out_boxdim_adaptive.csv",
+          "sha256": "6c3694dacc63846aabfbd919de7d845fc0c65695f14ff58814d37847b037f587",
+          "bytes": 389,
+          "status": "registrado"
+        },
+        {
+          "path": "formal-certification/tests/test_fct_adv4_adv5.py",
+          "sha256": "83a3ded51ae1ed99a0d32318ea3236d5a4ebb8c2ca48919092d64da80905252d",
+          "bytes": 2202,
+          "status": "registrado"
+        }
+      ],
+      "note": "Bins igual-contagem por quantis (1D e grade 2D em (t,x)), k=2..12; criterio resgate = D finito + R2>=0.9; saturacao exata N(k)=k marcada trivial",
+      "status": "registrado"
+    },
+    "2_verificacao": {
+      "method": "Execucao deterministica + pytest (6 linhas, 5 resgatados + 1 trivial, R2>=0.9)",
+      "tool": "python",
+      "command": "python formal-certification/experiments/fct_boxdim_adaptive.py && python -m pytest formal-certification/tests/test_fct_adv4_adv5.py -v",
+      "result": "pass",
+      "output": {
+        "path": "formal-certification/experiments/out_boxdim_adaptive.json",
+        "sha256": "c27527725fbdf20de0e1487ed916d05bf2e5e53d5b8190546564446bfeeee54d",
+        "bytes": 1515,
+        "status": "registrado"
+      },
+      "status": "registrado"
+    },
+    "3_meta_verificacao": {
+      "method": "pytest independente reexecuta a ferramenta e reconfere saidas congeladas",
+      "tool": "python",
+      "command": "python -m pytest formal-certification/tests/test_fct_adv4_adv5.py -v",
+      "result": "pass",
+      "output": {
+        "path": "formal-certification/experiments/out_boxdim_adaptive.json",
+        "sha256": "c27527725fbdf20de0e1487ed916d05bf2e5e53d5b8190546564446bfeeee54d",
+        "bytes": 1515,
+        "status": "registrado"
+      },
+      "status": "registrado"
+    },
+    "4_certificacao_externa": {
+      "auditor": "pendente",
+      "status": "pending",
+      "reference": ""
+    }
+  },
+  "confidence": {
+    "empirical": 0.65,
+    "statistical": 0.6,
+    "logical": 0.9,
+    "formal": 0.5
+  },
+  "generator": {
+    "tool": "certifier_core.py",
+    "version": "1.0.0"
+  },
+  "timestamp_utc": "2026-10-15T02:54:04+00:00",
+  "avisos": [
+    "espectro fora da hipótese de ordem δ ≥ γ ≥ β ≥ ρ (recebido ρ=0.65, β=0.6, γ=0.9, δ=0.5)"
+  ],
+  "certificate_hash": "1f1f4687eb63aac753d55a3f3af5add6f4262f1f8005780a25c9aecc5bfda16f"
+}

@@ -1,0 +1,44 @@
+{
+  "project": "IA-RESEARCH-FCT",
+  "claim": {
+    "id": "FCT-ADV-005",
+    "statement": "F3 phi_len 6,7,8,9,10,12 (288 testes cada, 100% validos; phi=12 inedito nesta frente): series theta binarias -> H Z3 ~0.004 identico = residuo degenerado, nao medicao; travessia 0.35 do legado (0.297->0.409) e de pipeline sem script sobrevivente -> (H), F3-H em aberto; Spearman 0/48 significativos (n_vs_theta rho=0.0, p=1.0) -> D4 sem suporte, segue pendente.",
+    "source": "formal-certification/experiments/f3_philen_spearman.py"
+  },
+  "proof": {
+    "artifacts": [
+      "formal-certification/experiments/f3_philen_spearman.py",
+      "formal-certification/experiments/out_f3_philen_regression.json",
+      "formal-certification/experiments/out_fct_philen_series.csv",
+      "formal-certification/experiments/out_spearman_sigma_theta.json",
+      "formal-certification/experiments/out_spearman_blocks.csv",
+      "formal-certification/tests/test_fct_adv4_adv5.py"
+    ],
+    "note": "Leitura read-only do repo Godel (gk_F3_tau_real.json + gk_F3_phi_len_{6,7,8,9,10,12}.json); H corrigido (Higuchi/RS/DFA/varlag, mediana dos validos); OLS H~phi so pontos Z3; Spearman scipy global + por bloco sigma_tgt"
+  },
+  "verification": {
+    "method": "Execucao deterministica + pytest (6 pontos Z3 + 4 legado, 48 blocos Spearman, 0 significativos)",
+    "tool": "python",
+    "command": "python formal-certification/experiments/f3_philen_spearman.py && python -m pytest formal-certification/tests/test_fct_adv4_adv5.py -v",
+    "result": "pass",
+    "output": "formal-certification/experiments/out_f3_philen_regression.json"
+  },
+  "meta_verification": {
+    "method": "pytest independente reexecuta a ferramenta e reconfere saidas congeladas",
+    "tool": "python",
+    "command": "python -m pytest formal-certification/tests/test_fct_adv4_adv5.py -v",
+    "result": "pass",
+    "output": "formal-certification/experiments/out_f3_philen_regression.json"
+  },
+  "external_certification": {
+    "auditor": "pendente",
+    "status": "pending",
+    "reference": ""
+  },
+  "confidence": {
+    "empirical": 0.7,
+    "statistical": 0.65,
+    "logical": 0.9,
+    "formal": 0.5
+  }
+}

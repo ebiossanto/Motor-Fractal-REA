@@ -1,0 +1,42 @@
+{
+  "project": "IA-RESEARCH-FCT",
+  "claim": {
+    "id": "FCT-ADV-004",
+    "statement": "Box-dim com bins adaptativos (quantis): 5/6 combinacoes resgatadas com D finito e R2>=0.9 (raw 1D 0.86/2D 1.65, donoho 2D 1.24, tail 0.77/1.04); donoho-1D D=1.0/R2=1.0 exatos = saturacao trivial, nao medicao; D2 reabilitado como auxiliar onde resgatado, segue so-H onde nao.",
+    "source": "formal-certification/experiments/fct_boxdim_adaptive.py"
+  },
+  "proof": {
+    "artifacts": [
+      "formal-certification/experiments/fct_boxdim_adaptive.py",
+      "formal-certification/experiments/out_boxdim_adaptive.json",
+      "formal-certification/experiments/out_boxdim_adaptive.csv",
+      "formal-certification/tests/test_fct_adv4_adv5.py"
+    ],
+    "note": "Bins igual-contagem por quantis (1D e grade 2D em (t,x)), k=2..12; criterio resgate = D finito + R2>=0.9; saturacao exata N(k)=k marcada trivial"
+  },
+  "verification": {
+    "method": "Execucao deterministica + pytest (6 linhas, 5 resgatados + 1 trivial, R2>=0.9)",
+    "tool": "python",
+    "command": "python formal-certification/experiments/fct_boxdim_adaptive.py && python -m pytest formal-certification/tests/test_fct_adv4_adv5.py -v",
+    "result": "pass",
+    "output": "formal-certification/experiments/out_boxdim_adaptive.json"
+  },
+  "meta_verification": {
+    "method": "pytest independente reexecuta a ferramenta e reconfere saidas congeladas",
+    "tool": "python",
+    "command": "python -m pytest formal-certification/tests/test_fct_adv4_adv5.py -v",
+    "result": "pass",
+    "output": "formal-certification/experiments/out_boxdim_adaptive.json"
+  },
+  "external_certification": {
+    "auditor": "pendente",
+    "status": "pending",
+    "reference": ""
+  },
+  "confidence": {
+    "empirical": 0.65,
+    "statistical": 0.6,
+    "logical": 0.9,
+    "formal": 0.5
+  }
+}

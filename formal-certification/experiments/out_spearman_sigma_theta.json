@@ -1,0 +1,401 @@
+{
+  "questao": "Spearman sigma_tgt×theta (D4)?",
+  "blocos": [
+    {
+      "phi": 6,
+      "bloco": "sigma_tgt=1",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 6,
+      "bloco": "sigma_tgt=1",
+      "par": "n_vs_tempo",
+      "rho": -0.03276768245889312,
+      "p": 0.7512922769483829,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 6,
+      "bloco": "sigma_tgt=2",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 6,
+      "bloco": "sigma_tgt=2",
+      "par": "n_vs_tempo",
+      "rho": 0.07165813039928486,
+      "p": 0.48780834848977117,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 6,
+      "bloco": "sigma_tgt=100",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 6,
+      "bloco": "sigma_tgt=100",
+      "par": "n_vs_tempo",
+      "rho": -0.016765333465625375,
+      "p": 0.8712069299386485,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 6,
+      "bloco": "global",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 6,
+      "bloco": "global",
+      "par": "n_vs_tempo",
+      "rho": 0.00463972745691022,
+      "p": 0.9375124388036024,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 7,
+      "bloco": "sigma_tgt=1",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 7,
+      "bloco": "sigma_tgt=1",
+      "par": "n_vs_tempo",
+      "rho": 0.087109524208249,
+      "p": 0.3987135788877695,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 7,
+      "bloco": "sigma_tgt=2",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 7,
+      "bloco": "sigma_tgt=2",
+      "par": "n_vs_tempo",
+      "rho": -0.052614268494430703,
+      "p": 0.6106734837493237,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 7,
+      "bloco": "sigma_tgt=100",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 7,
+      "bloco": "sigma_tgt=100",
+      "par": "n_vs_tempo",
+      "rho": -0.007549310195820389,
+      "p": 0.9418061825137702,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 7,
+      "bloco": "global",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 7,
+      "bloco": "global",
+      "par": "n_vs_tempo",
+      "rho": 0.010760978359752593,
+      "p": 0.8557154222319662,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 8,
+      "bloco": "sigma_tgt=1",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 8,
+      "bloco": "sigma_tgt=1",
+      "par": "n_vs_tempo",
+      "rho": 0.045573956915370674,
+      "p": 0.659276977095917,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 8,
+      "bloco": "sigma_tgt=2",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 8,
+      "bloco": "sigma_tgt=2",
+      "par": "n_vs_tempo",
+      "rho": 0.04160325383435259,
+      "p": 0.6873443535406688,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 8,
+      "bloco": "sigma_tgt=100",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 8,
+      "bloco": "sigma_tgt=100",
+      "par": "n_vs_tempo",
+      "rho": -0.13708159792985303,
+      "p": 0.1829185630569345,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 8,
+      "bloco": "global",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 8,
+      "bloco": "global",
+      "par": "n_vs_tempo",
+      "rho": -0.011695752308965881,
+      "p": 0.8433368619912711,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 9,
+      "bloco": "sigma_tgt=1",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 9,
+      "bloco": "sigma_tgt=1",
+      "par": "n_vs_tempo",
+      "rho": -0.095692478607629,
+      "p": 0.35369834162654934,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 9,
+      "bloco": "sigma_tgt=2",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 9,
+      "bloco": "sigma_tgt=2",
+      "par": "n_vs_tempo",
+      "rho": -0.058012623774496376,
+      "p": 0.5745026375461592,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 9,
+      "bloco": "sigma_tgt=100",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 9,
+      "bloco": "sigma_tgt=100",
+      "par": "n_vs_tempo",
+      "rho": -0.032870631902969044,
+      "p": 0.7505364130411932,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 9,
+      "bloco": "global",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 9,
+      "bloco": "global",
+      "par": "n_vs_tempo",
+      "rho": -0.06082076298814832,
+      "p": 0.30365531580800076,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 10,
+      "bloco": "sigma_tgt=1",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 10,
+      "bloco": "sigma_tgt=1",
+      "par": "n_vs_tempo",
+      "rho": -0.12175277854011861,
+      "p": 0.23732314039219227,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 10,
+      "bloco": "sigma_tgt=2",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 10,
+      "bloco": "sigma_tgt=2",
+      "par": "n_vs_tempo",
+      "rho": 0.08497992353676154,
+      "p": 0.41038669346694057,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 10,
+      "bloco": "sigma_tgt=100",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 10,
+      "bloco": "sigma_tgt=100",
+      "par": "n_vs_tempo",
+      "rho": 0.11776372150545814,
+      "p": 0.2531587326356372,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 10,
+      "bloco": "global",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 10,
+      "bloco": "global",
+      "par": "n_vs_tempo",
+      "rho": 0.028679759221469266,
+      "p": 0.6278929416825217,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 12,
+      "bloco": "sigma_tgt=1",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 12,
+      "bloco": "sigma_tgt=1",
+      "par": "n_vs_tempo",
+      "rho": -0.13608073178029012,
+      "p": 0.18616597171950022,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 12,
+      "bloco": "sigma_tgt=2",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 12,
+      "bloco": "sigma_tgt=2",
+      "par": "n_vs_tempo",
+      "rho": 0.09419518073383018,
+      "p": 0.3613148461894434,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 12,
+      "bloco": "sigma_tgt=100",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 12,
+      "bloco": "sigma_tgt=100",
+      "par": "n_vs_tempo",
+      "rho": 0.04588314677411236,
+      "p": 0.6571104940825064,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 12,
+      "bloco": "global",
+      "par": "n_vs_theta",
+      "rho": 0.0,
+      "p": 1.0,
+      "nota": "não significativo"
+    },
+    {
+      "phi": 12,
+      "bloco": "global",
+      "par": "n_vs_tempo",
+      "rho": -0.0006561028966930306,
+      "p": 0.9911548224085502,
+      "nota": "não significativo"
+    }
+  ],
+  "n_significativos": 0,
+  "veredito": "0/48 pares significativos. D4 sem suporte: nenhuma monotonicidade significativa; hipótese segue pendente.",
+  "reprodutibilidade": {
+    "comando": "python formal-certification/experiments/f3_philen_spearman.py",
+    "semente": "determinístico (sem RNG)",
+    "saidas": [
+      "out_f3_philen_regression.json",
+      "out_fct_philen_series.csv",
+      "out_spearman_sigma_theta.json",
+      "out_spearman_blocks.csv"
+    ]
+  }
+}

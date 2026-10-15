@@ -1,0 +1,538 @@
+{
+  "questao": "H~phi_len: travessia 0.35 artefato ou sinal?",
+  "pontos": [
+    {
+      "phi": 6,
+      "n_translations": 288,
+      "valid_rate": 1.0,
+      "H_theta": 0.004466895352794812,
+      "H_interpolant": 0.004466895352794674,
+      "H_consenso": 0.004466895352794743,
+      "global": {
+        "n_vs_theta": {
+          "rho": 0.0,
+          "p": 1.0,
+          "nota": "não significativo"
+        },
+        "n_vs_tempo": {
+          "rho": 0.00463972745691022,
+          "p": 0.9375124388036024,
+          "nota": "não significativo"
+        },
+        "theta_vs_proofsrc": {
+          "rho": 0.9999999999999998,
+          "p": 0.0,
+          "nota": "significativo"
+        }
+      },
+      "por_bloco": {
+        "1": {
+          "n": 96,
+          "n_vs_theta": {
+            "rho": 0.0,
+            "p": 1.0,
+            "nota": "não significativo"
+          },
+          "n_vs_tempo": {
+            "rho": -0.03276768245889312,
+            "p": 0.7512922769483829,
+            "nota": "não significativo"
+          },
+          "theta_vs_proofsrc": {
+            "rho": 1.0,
+            "p": 0.0,
+            "nota": "significativo"
+          }
+        },
+        "2": {
+          "n": 96,
+          "n_vs_theta": {
+            "rho": 0.0,
+            "p": 1.0,
+            "nota": "não significativo"
+          },
+          "n_vs_tempo": {
+            "rho": 0.07165813039928486,
+            "p": 0.48780834848977117,
+            "nota": "não significativo"
+          },
+          "theta_vs_proofsrc": {
+            "rho": 1.0,
+            "p": 0.0,
+            "nota": "significativo"
+          }
+        },
+        "100": {
+          "n": 96,
+          "n_vs_theta": {
+            "rho": 0.0,
+            "p": 1.0,
+            "nota": "não significativo"
+          },
+          "n_vs_tempo": {
+            "rho": -0.016765333465625375,
+            "p": 0.8712069299386485,
+            "nota": "não significativo"
+          },
+          "theta_vs_proofsrc": {
+            "rho": 1.0,
+            "p": 0.0,
+            "nota": "significativo"
+          }
+        }
+      },
+      "metodologia": "Z3-disponivel+H-corrigido (P)"
+    },
+    {
+      "phi": 7,
+      "n_translations": 288,
+      "valid_rate": 1.0,
+      "H_theta": 0.004466895352794812,
+      "H_interpolant": 0.004466895352794674,
+      "H_consenso": 0.004466895352794743,
+      "global": {
+        "n_vs_theta": {
+          "rho": 0.0,
+          "p": 1.0,
+          "nota": "não significativo"
+        },
+        "n_vs_tempo": {
+          "rho": 0.010760978359752593,
+          "p": 0.8557154222319662,
+          "nota": "não significativo"
+        },
+        "theta_vs_proofsrc": {
+          "rho": 0.9999999999999998,
+          "p": 0.0,
+          "nota": "significativo"
+        }
+      },
+      "por_bloco": {
+        "1": {
+          "n": 96,
+          "n_vs_theta": {
+            "rho": 0.0,
+            "p": 1.0,
+            "nota": "não significativo"
+          },
+          "n_vs_tempo": {
+            "rho": 0.087109524208249,
+            "p": 0.3987135788877695,
+            "nota": "não significativo"
+          },
+          "theta_vs_proofsrc": {
+            "rho": 1.0,
+            "p": 0.0,
+            "nota": "significativo"
+          }
+        },
+        "2": {
+          "n": 96,
+          "n_vs_theta": {
+            "rho": 0.0,
+            "p": 1.0,
+            "nota": "não significativo"
+          },
+          "n_vs_tempo": {
+            "rho": -0.052614268494430703,
+            "p": 0.6106734837493237,
+            "nota": "não significativo"
+          },
+          "theta_vs_proofsrc": {
+            "rho": 1.0,
+            "p": 0.0,
+            "nota": "significativo"
+          }
+        },
+        "100": {
+          "n": 96,
+          "n_vs_theta": {
+            "rho": 0.0,
+            "p": 1.0,
+            "nota": "não significativo"
+          },
+          "n_vs_tempo": {
+            "rho": -0.007549310195820389,
+            "p": 0.9418061825137702,
+            "nota": "não significativo"
+          },
+          "theta_vs_proofsrc": {
+            "rho": 1.0,
+            "p": 0.0,
+            "nota": "significativo"
+          }
+        }
+      },
+      "metodologia": "Z3-disponivel+H-corrigido (P)"
+    },
+    {
+      "phi": 8,
+      "n_translations": 288,
+      "valid_rate": 1.0,
+      "H_theta": 0.004466895352794812,
+      "H_interpolant": 0.004466895352794674,
+      "H_consenso": 0.004466895352794743,
+      "global": {
+        "n_vs_theta": {
+          "rho": 0.0,
+          "p": 1.0,
+          "nota": "não significativo"
+        },
+        "n_vs_tempo": {
+          "rho": -0.011695752308965881,
+          "p": 0.8433368619912711,
+          "nota": "não significativo"
+        },
+        "theta_vs_proofsrc": {
+          "rho": 0.9999999999999998,
+          "p": 0.0,
+          "nota": "significativo"
+        }
+      },
+      "por_bloco": {
+        "1": {
+          "n": 96,
+          "n_vs_theta": {
+            "rho": 0.0,
+            "p": 1.0,
+            "nota": "não significativo"
+          },
+          "n_vs_tempo": {
+            "rho": 0.045573956915370674,
+            "p": 0.659276977095917,
+            "nota": "não significativo"
+          },
+          "theta_vs_proofsrc": {
+            "rho": 1.0,
+            "p": 0.0,
+            "nota": "significativo"
+          }
+        },
+        "2": {
+          "n": 96,
+          "n_vs_theta": {
+            "rho": 0.0,
+            "p": 1.0,
+            "nota": "não significativo"
+          },
+          "n_vs_tempo": {
+            "rho": 0.04160325383435259,
+            "p": 0.6873443535406688,
+            "nota": "não significativo"
+          },
+          "theta_vs_proofsrc": {
+            "rho": 1.0,
+            "p": 0.0,
+            "nota": "significativo"
+          }
+        },
+        "100": {
+          "n": 96,
+          "n_vs_theta": {
+            "rho": 0.0,
+            "p": 1.0,
+            "nota": "não significativo"
+          },
+          "n_vs_tempo": {
+            "rho": -0.13708159792985303,
+            "p": 0.1829185630569345,
+            "nota": "não significativo"
+          },
+          "theta_vs_proofsrc": {
+            "rho": 1.0,
+            "p": 0.0,
+            "nota": "significativo"
+          }
+        }
+      },
+      "metodologia": "Z3-disponivel+H-corrigido (P)"
+    },
+    {
+      "phi": 9,
+      "n_translations": 288,
+      "valid_rate": 1.0,
+      "H_theta": 0.004466895352794812,
+      "H_interpolant": 0.004466895352794674,
+      "H_consenso": 0.004466895352794743,
+      "global": {
+        "n_vs_theta": {
+          "rho": 0.0,
+          "p": 1.0,
+          "nota": "não significativo"
+        },
+        "n_vs_tempo": {
+          "rho": -0.06082076298814832,
+          "p": 0.30365531580800076,
+          "nota": "não significativo"
+        },
+        "theta_vs_proofsrc": {
+          "rho": 0.9999999999999998,
+          "p": 0.0,
+          "nota": "significativo"
+        }
+      },
+      "por_bloco": {
+        "1": {
+          "n": 96,
+          "n_vs_theta": {
+            "rho": 0.0,
+            "p": 1.0,
+            "nota": "não significativo"
+          },
+          "n_vs_tempo": {
+            "rho": -0.095692478607629,
+            "p": 0.35369834162654934,
+            "nota": "não significativo"
+          },
+          "theta_vs_proofsrc": {
+            "rho": 1.0,
+            "p": 0.0,
+            "nota": "significativo"
+          }
+        },
+        "2": {
+          "n": 96,
+          "n_vs_theta": {
+            "rho": 0.0,
+            "p": 1.0,
+            "nota": "não significativo"
+          },
+          "n_vs_tempo": {
+            "rho": -0.058012623774496376,
+            "p": 0.5745026375461592,
+            "nota": "não significativo"
+          },
+          "theta_vs_proofsrc": {
+            "rho": 1.0,
+            "p": 0.0,
+            "nota": "significativo"
+          }
+        },
+        "100": {
+          "n": 96,
+          "n_vs_theta": {
+            "rho": 0.0,
+            "p": 1.0,
+            "nota": "não significativo"
+          },
+          "n_vs_tempo": {
+            "rho": -0.032870631902969044,
+            "p": 0.7505364130411932,
+            "nota": "não significativo"
+          },
+          "theta_vs_proofsrc": {
+            "rho": 1.0,
+            "p": 0.0,
+            "nota": "significativo"
+          }
+        }
+      },
+      "metodologia": "Z3-disponivel+H-corrigido (P)"
+    },
+    {
+      "phi": 10,
+      "n_translations": 288,
+      "valid_rate": 1.0,
+      "H_theta": 0.004466895352794812,
+      "H_interpolant": 0.004466895352794674,
+      "H_consenso": 0.004466895352794743,
+      "global": {
+        "n_vs_theta": {
+          "rho": 0.0,
+          "p": 1.0,
+          "nota": "não significativo"
+        },
+        "n_vs_tempo": {
+          "rho": 0.028679759221469266,
+          "p": 0.6278929416825217,
+          "nota": "não significativo"
+        },
+        "theta_vs_proofsrc": {
+          "rho": 0.9999999999999998,
+          "p": 0.0,
+          "nota": "significativo"
+        }
+      },
+      "por_bloco": {
+        "1": {
+          "n": 96,
+          "n_vs_theta": {
+            "rho": 0.0,
+            "p": 1.0,
+            "nota": "não significativo"
+          },
+          "n_vs_tempo": {
+            "rho": -0.12175277854011861,
+            "p": 0.23732314039219227,
+            "nota": "não significativo"
+          },
+          "theta_vs_proofsrc": {
+            "rho": 1.0,
+            "p": 0.0,
+            "nota": "significativo"
+          }
+        },
+        "2": {
+          "n": 96,
+          "n_vs_theta": {
+            "rho": 0.0,
+            "p": 1.0,
+            "nota": "não significativo"
+          },
+          "n_vs_tempo": {
+            "rho": 0.08497992353676154,
+            "p": 0.41038669346694057,
+            "nota": "não significativo"
+          },
+          "theta_vs_proofsrc": {
+            "rho": 1.0,
+            "p": 0.0,
+            "nota": "significativo"
+          }
+        },
+        "100": {
+          "n": 96,
+          "n_vs_theta": {
+            "rho": 0.0,
+            "p": 1.0,
+            "nota": "não significativo"
+          },
+          "n_vs_tempo": {
+            "rho": 0.11776372150545814,
+            "p": 0.2531587326356372,
+            "nota": "não significativo"
+          },
+          "theta_vs_proofsrc": {
+            "rho": 1.0,
+            "p": 0.0,
+            "nota": "significativo"
+          }
+        }
+      },
+      "metodologia": "Z3-disponivel+H-corrigido (P)"
+    },
+    {
+      "phi": 12,
+      "n_translations": 288,
+      "valid_rate": 1.0,
+      "H_theta": 0.004466895352794812,
+      "H_interpolant": 0.004466895352794674,
+      "H_consenso": 0.004466895352794743,
+      "global": {
+        "n_vs_theta": {
+          "rho": 0.0,
+          "p": 1.0,
+          "nota": "não significativo"
+        },
+        "n_vs_tempo": {
+          "rho": -0.0006561028966930306,
+          "p": 0.9911548224085502,
+          "nota": "não significativo"
+        },
+        "theta_vs_proofsrc": {
+          "rho": 0.9999999999999998,
+          "p": 0.0,
+          "nota": "significativo"
+        }
+      },
+      "por_bloco": {
+        "1": {
+          "n": 96,
+          "n_vs_theta": {
+            "rho": 0.0,
+            "p": 1.0,
+            "nota": "não significativo"
+          },
+          "n_vs_tempo": {
+            "rho": -0.13608073178029012,
+            "p": 0.18616597171950022,
+            "nota": "não significativo"
+          },
+          "theta_vs_proofsrc": {
+            "rho": 1.0,
+            "p": 0.0,
+            "nota": "significativo"
+          }
+        },
+        "2": {
+          "n": 96,
+          "n_vs_theta": {
+            "rho": 0.0,
+            "p": 1.0,
+            "nota": "não significativo"
+          },
+          "n_vs_tempo": {
+            "rho": 0.09419518073383018,
+            "p": 0.3613148461894434,
+            "nota": "não significativo"
+          },
+          "theta_vs_proofsrc": {
+            "rho": 1.0,
+            "p": 0.0,
+            "nota": "significativo"
+          }
+        },
+        "100": {
+          "n": 96,
+          "n_vs_theta": {
+            "rho": 0.0,
+            "p": 1.0,
+            "nota": "não significativo"
+          },
+          "n_vs_tempo": {
+            "rho": 0.04588314677411236,
+            "p": 0.6571104940825064,
+            "nota": "não significativo"
+          },
+          "theta_vs_proofsrc": {
+            "rho": 1.0,
+            "p": 0.0,
+            "nota": "significativo"
+          }
+        }
+      },
+      "metodologia": "Z3-disponivel+H-corrigido (P)"
+    }
+  ],
+  "legado_referencia_H": [
+    {
+      "config": "phi_len=3,r_w=2,w_star=00",
+      "H": 0.2970294401078625,
+      "n": 216
+    },
+    {
+      "config": "phi_len=4,r_w=2,w_star=00",
+      "H": 0.2970294401078625,
+      "n": 216
+    },
+    {
+      "config": "phi_len=4,r_w=3,w_star=01",
+      "H": 0.2970294401078625,
+      "n": 216
+    },
+    {
+      "config": "phi_len=5,r_w=2,w_star=00",
+      "H": 0.40908426242798196,
+      "n": 144
+    }
+  ],
+  "regressao_Z3": {
+    "slope": -1.1951773221488858e-19,
+    "intercept": 0.004466895352794743,
+    "R2": null,
+    "phi_onde_H_cruza_035": null,
+    "n_pontos": 6,
+    "nota": "OLS só pontos Z3 (metodologia única)"
+  },
+  "veredito": "Z3: 6/6 phi com H valido. H Z3 identico (~0.004) em todos os phi: serie theta binaria (2 valores) -> estimador retorna residuo degenerado, NAO medicao. Nao confirma nem refuta travessia; H legado 0.297->0.409 e de pipeline distinto cujo script nao sobreviveu -> (H). F3-H em aberto.",
+  "reprodutibilidade": {
+    "comando": "python formal-certification/experiments/f3_philen_spearman.py",
+    "semente": "determinístico (sem RNG)",
+    "saidas": [
+      "out_f3_philen_regression.json",
+      "out_fct_philen_series.csv",
+      "out_spearman_sigma_theta.json",
+      "out_spearman_blocks.csv"
+    ]
+  }
+}

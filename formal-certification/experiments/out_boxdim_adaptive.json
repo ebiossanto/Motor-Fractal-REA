@@ -1,0 +1,56 @@
+{
+  "questao": "Bins adaptativos resgatam Box-D? (F2/D2)",
+  "blocos": {
+    "raw": {
+      "adapt_1d": {
+        "D": 0.863027764119484,
+        "R2": 0.9872277976194894,
+        "nota": "resgatado"
+      },
+      "adapt_2d": {
+        "D": 1.6535491113817382,
+        "R2": 0.995581235578878,
+        "nota": "resgatado"
+      },
+      "legacy_2d_uniforme": 0.9437856946717307,
+      "n": 300
+    },
+    "donoho": {
+      "adapt_1d": {
+        "D": 1.0,
+        "R2": 1.0,
+        "nota": "trivial (saturado: N(k)=k)"
+      },
+      "adapt_2d": {
+        "D": 1.2356145031162917,
+        "R2": 0.9837460764367848,
+        "nota": "resgatado"
+      },
+      "legacy_2d_uniforme": 0.7300964924189407,
+      "n": 300
+    },
+    "tail": {
+      "adapt_1d": {
+        "D": 0.7673109215295394,
+        "R2": 0.9510616642895132,
+        "nota": "resgatado"
+      },
+      "adapt_2d": {
+        "D": 1.0400512085940203,
+        "R2": 0.9421935922924116,
+        "nota": "resgatado"
+      },
+      "legacy_2d_uniforme": 0.24420388000345905,
+      "n": 30
+    }
+  },
+  "veredito": "5/6 combinações resgatadas (D finito, R2>=0.9). D2 reabilitado como métrica auxiliar onde resgatado; onde não, segue só-H (F2 mantido).",
+  "reprodutibilidade": {
+    "comando": "python formal-certification/experiments/fct_boxdim_adaptive.py",
+    "semente": "determinístico (sem RNG)",
+    "saidas": [
+      "out_boxdim_adaptive.json",
+      "out_boxdim_adaptive.csv"
+    ]
+  }
+}
