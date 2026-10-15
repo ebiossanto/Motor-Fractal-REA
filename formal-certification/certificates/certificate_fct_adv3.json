@@ -1,0 +1,93 @@
+{
+  "schema": "ten-proofs-certificate/v1",
+  "project": "IA-RESEARCH-FCT",
+  "niveis": {
+    "0_proposicao": {
+      "id": "FCT-ADV-003",
+      "statement": "Calibracao com ground-truth ARFIMA (H conhecido, semente 7): ranking varlag > higuchi > rs > dfa > box2d; vies real_like higuchi -0.29, rs +0.47, dfa +0.86, varlag -0.25, box2d +0.64; H real corrigido raw=0.44 (cruza 0.35) e Donoho=0.55 — o anti-persistente raw 0.26 era subestimacao por spikes.",
+      "source": {
+        "path": "formal-certification/experiments/hurst_estimator_calibration.py",
+        "sha256": "b1d43527fe2fa6bc386441eb4cdf59d8c51ad5a7586b66470515ec0e5baf5990",
+        "bytes": 6582,
+        "status": "registrado"
+      },
+      "status": "registrado"
+    },
+    "1_prova": {
+      "artifacts": [
+        {
+          "path": "formal-certification/experiments/hurst_estimator_calibration.py",
+          "sha256": "b1d43527fe2fa6bc386441eb4cdf59d8c51ad5a7586b66470515ec0e5baf5990",
+          "bytes": 6582,
+          "status": "registrado"
+        },
+        {
+          "path": "formal-certification/experiments/out_hurst_calibration.json",
+          "sha256": "07bd32a821864c509ff530fec64c24cfe428d4c652f8b08fc45ca3b2d07e7cfc",
+          "bytes": 2627,
+          "status": "registrado"
+        },
+        {
+          "path": "formal-certification/experiments/out_hurst_calibration.csv",
+          "sha256": "055b21283eb7b6a154d66dd659a84ff5fc992bd093170ef9487028111a3cb24d",
+          "bytes": 5459,
+          "status": "registrado"
+        },
+        {
+          "path": "formal-certification/tests/test_fct_adv2_adv3.py",
+          "sha256": "cbc984f5383ac101971378d75754587349b20c553683b056160959f44a0c5702",
+          "bytes": 2342,
+          "status": "registrado"
+        }
+      ],
+      "note": "ARFIMA(0,d,0) H={0.2,0.3,0.35,0.5,0.7} x {limpo,spikes,plato,real_like}; 100 linhas; correcao H_real - bias(real_like); consenso = mediana dos validos (0,1)",
+      "status": "registrado"
+    },
+    "2_verificacao": {
+      "method": "Execucao deterministica + pytest (ranking, consenso em (0,1), 100 linhas, 5 estimadores)",
+      "tool": "python",
+      "command": "python formal-certification/experiments/hurst_estimator_calibration.py && python -m pytest formal-certification/tests/test_fct_adv2_adv3.py -v",
+      "result": "pass",
+      "output": {
+        "path": "formal-certification/experiments/out_hurst_calibration.json",
+        "sha256": "07bd32a821864c509ff530fec64c24cfe428d4c652f8b08fc45ca3b2d07e7cfc",
+        "bytes": 2627,
+        "status": "registrado"
+      },
+      "status": "registrado"
+    },
+    "3_meta_verificacao": {
+      "method": "pytest independente reexecuta a ferramenta e reconfere saidas congeladas",
+      "tool": "python",
+      "command": "python -m pytest formal-certification/tests/test_fct_adv2_adv3.py -v",
+      "result": "pass",
+      "output": {
+        "path": "formal-certification/experiments/out_hurst_calibration.json",
+        "sha256": "07bd32a821864c509ff530fec64c24cfe428d4c652f8b08fc45ca3b2d07e7cfc",
+        "bytes": 2627,
+        "status": "registrado"
+      },
+      "status": "registrado"
+    },
+    "4_certificacao_externa": {
+      "auditor": "pendente",
+      "status": "pending",
+      "reference": ""
+    }
+  },
+  "confidence": {
+    "empirical": 0.6,
+    "statistical": 0.55,
+    "logical": 0.9,
+    "formal": 0.5
+  },
+  "generator": {
+    "tool": "certifier_core.py",
+    "version": "1.0.0"
+  },
+  "timestamp_utc": "2026-10-15T02:44:31+00:00",
+  "avisos": [
+    "espectro fora da hipótese de ordem δ ≥ γ ≥ β ≥ ρ (recebido ρ=0.6, β=0.55, γ=0.9, δ=0.5)"
+  ],
+  "certificate_hash": "ee58b6846eb65618a36a66293bbb197187d4dc77b71b8e7fdb0563ddddce595e"
+}

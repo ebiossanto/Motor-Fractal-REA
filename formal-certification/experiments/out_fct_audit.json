@@ -1,0 +1,221 @@
+{
+  "questao": "rho_c=0.25 (doc §2.4) vs rho_c=(1-r)^4≈0.706 (gk_D1/gk_F1); H real no tail?",
+  "modelos": {
+    "A_doc_absoluto": {
+      "E_pfa": 0.08333333333333333,
+      "p": 0.16666666666666666,
+      "break_even_analitico": 0.0625,
+      "break_even_numerico": 0.06240946742256516,
+      "half_mitigation_analitica": 0.25,
+      "half_mitigation_numerica": 0.25
+    },
+    "B_gk_relativo": {
+      "E_pfa_expr": "p*(1-r)",
+      "r": 0.08333333333333333,
+      "p": 0.16666666666666666,
+      "break_even_analitico": 0.7060667438271604,
+      "break_even_numerico": 0.7059770347421622,
+      "half_mitigation_analitica": 2.824266975308641,
+      "half_mitigation_numerica": null
+    }
+  },
+  "veredito_rho_c": "0.25 NÃO é break-even em nenhum modelo: é a meia-mitigaç��o do Modelo A (M=0.5 em ρ=0.25). Break-even (DFA=PFA): 0.0625 no Modelo A; 0.7063 no Modelo B. A frase 'ρ_c=0.25 onde o PFA se torna vantajoso' (§2.4) está errada sob as próprias fórmulas do doc (vantagem começa em 0.0625) e incompatível com o Modelo B (0.7063). Correção: distinguir break-even × meia-mitigaç��o e fixar um modelo PFA.",
+  "telemetria": {
+    "n": 300,
+    "p90_threshold": 89.37000000000002,
+    "rho_global": 0.27192333333333335,
+    "n_eventos": 10,
+    "eventos": [
+      {
+        "event_id": 0,
+        "start": 208,
+        "end": 209,
+        "duration": 1,
+        "mean_cpu": 93.1,
+        "rho_eff": 0.9309999999999999,
+        "acima_de": {
+          "break_even_A": true,
+          "half_mit_A_doc_025": true,
+          "break_even_B": true
+        }
+      },
+      {
+        "event_id": 1,
+        "start": 217,
+        "end": 227,
+        "duration": 10,
+        "mean_cpu": 99.4,
+        "rho_eff": 0.9940000000000001,
+        "acima_de": {
+          "break_even_A": true,
+          "half_mit_A_doc_025": true,
+          "break_even_B": true
+        }
+      },
+      {
+        "event_id": 2,
+        "start": 228,
+        "end": 230,
+        "duration": 2,
+        "mean_cpu": 91.15,
+        "rho_eff": 0.9115000000000001,
+        "acima_de": {
+          "break_even_A": true,
+          "half_mit_A_doc_025": true,
+          "break_even_B": true
+        }
+      },
+      {
+        "event_id": 3,
+        "start": 231,
+        "end": 232,
+        "duration": 1,
+        "mean_cpu": 92.9,
+        "rho_eff": 0.929,
+        "acima_de": {
+          "break_even_A": true,
+          "half_mit_A_doc_025": true,
+          "break_even_B": true
+        }
+      },
+      {
+        "event_id": 4,
+        "start": 233,
+        "end": 234,
+        "duration": 1,
+        "mean_cpu": 91.7,
+        "rho_eff": 0.917,
+        "acima_de": {
+          "break_even_A": true,
+          "half_mit_A_doc_025": true,
+          "break_even_B": true
+        }
+      },
+      {
+        "event_id": 5,
+        "start": 236,
+        "end": 237,
+        "duration": 1,
+        "mean_cpu": 100.0,
+        "rho_eff": 1.0,
+        "acima_de": {
+          "break_even_A": true,
+          "half_mit_A_doc_025": true,
+          "break_even_B": true
+        }
+      },
+      {
+        "event_id": 6,
+        "start": 238,
+        "end": 243,
+        "duration": 5,
+        "mean_cpu": 93.20000000000002,
+        "rho_eff": 0.9320000000000002,
+        "acima_de": {
+          "break_even_A": true,
+          "half_mit_A_doc_025": true,
+          "break_even_B": true
+        }
+      },
+      {
+        "event_id": 7,
+        "start": 250,
+        "end": 251,
+        "duration": 1,
+        "mean_cpu": 100.0,
+        "rho_eff": 1.0,
+        "acima_de": {
+          "break_even_A": true,
+          "half_mit_A_doc_025": true,
+          "break_even_B": true
+        }
+      },
+      {
+        "event_id": 8,
+        "start": 253,
+        "end": 257,
+        "duration": 4,
+        "mean_cpu": 95.225,
+        "rho_eff": 0.9522499999999999,
+        "acima_de": {
+          "break_even_A": true,
+          "half_mit_A_doc_025": true,
+          "break_even_B": true
+        }
+      },
+      {
+        "event_id": 9,
+        "start": 258,
+        "end": 262,
+        "duration": 4,
+        "mean_cpu": 98.0,
+        "rho_eff": 0.98,
+        "acima_de": {
+          "break_even_A": true,
+          "half_mit_A_doc_025": true,
+          "break_even_B": true
+        }
+      }
+    ],
+    "fracao_eventos_acima": {
+      "break_even_A": 1.0,
+      "half_mit_A_doc_025": 1.0,
+      "break_even_B": 1.0
+    },
+    "leitura": "ρ global=0.272; 10 eventos P90 com ρ_eff médio=0.955 quando há eventos. Sob Modelo A, o sistema real opera ACIMA do break-even (0.0625) — PFA justificado; sob Modelo B, ABAIXO de 0.706 — DFA ainda suficiente. A escolha do modelo decide a recomendação operacional."
+  },
+  "hurst": {
+    "raw": {
+      "serie": "raw",
+      "n": 300,
+      "higuchi_D": 1.7833377100524122,
+      "H_higuchi": 0.21666228994758785,
+      "H_rs": 0.9101498950555752,
+      "H_dfa": 1.2739160981099424,
+      "variance_slope_corr": 0.5224295506053175,
+      "H_variance_corr": 0.26121477530265874,
+      "boxdim_2d": 0.9437856946717307,
+      "H_consenso_mediana": 0.26121477530265874,
+      "n_validos_01": 3,
+      "abaixo_035": true
+    },
+    "donoho_surrogate": {
+      "serie": "donoho_surrogate",
+      "n": 300,
+      "higuchi_D": 1.406668491988475,
+      "H_higuchi": 0.5933315080115249,
+      "H_rs": 1.0176124279788004,
+      "H_dfa": 1.2251805026612315,
+      "variance_slope_corr": 0.6731487342922828,
+      "H_variance_corr": 0.3365743671461414,
+      "boxdim_2d": 0.7300964924189407,
+      "H_consenso_mediana": 0.46495293757883316,
+      "n_validos_01": 2,
+      "abaixo_035": false
+    },
+    "tail_block": {
+      "serie": "tail_block",
+      "n": 30,
+      "higuchi_D": 1.9231906552455633,
+      "H_higuchi": 0.07680934475443668,
+      "H_rs": null,
+      "H_dfa": null,
+      "variance_slope_corr": 0.34557599076067264,
+      "H_variance_corr": 0.17278799538033632,
+      "boxdim_2d": 0.24420388000345905,
+      "H_consenso_mediana": 0.1247986700673865,
+      "n_validos_01": 2,
+      "abaixo_035": true
+    },
+    "bug_variance_antigo": "O H=4.83 impossível vinha de np.diff(x, n=s) (diferença de ordem n, não lag s). Corrigido para Var(X_{t+s}-X_t); H resultante fica em (0,1).",
+    "boxdim": "Box-counting 1D legacy saturava (10/9 caixas). Reimplementado em 2D (t,x); se ainda degenerar (contagens sem escala), retorna null honesto em vez de número espúrio."
+  },
+  "reprodutibilidade": {
+    "comando": "python formal-certification/experiments/fct_phase_transition_audit.py",
+    "semente": "determinístico (sem RNG)",
+    "saidas": [
+      "out_fct_audit.json",
+      "out_fct_rho_sweep.csv"
+    ]
+  }
+}

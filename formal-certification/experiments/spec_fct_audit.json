@@ -1,0 +1,42 @@
+{
+  "project": "IA-RESEARCH-FCT",
+  "claim": {
+    "id": "FCT-AUDIT-001",
+    "statement": "O rho_c=0.25 do doc §2.4 NAO e break-even em nenhum modelo: e a meia-mitigaç��o do Modelo A (M=0.5 em rho=0.25). Break-even (DFA=PFA): 0.0625 no Modelo A (E_pfa=1/12 absoluto); 0.7063 no Modelo B (E_pfa=p(1-r)). Telemetria real (n=300, P90=89.4, 10 eventos, rho_global=0.272): H consenso raw=0.26 anti-persistente, Donoho=0.46 cruza 0.35, bloco tail=0.12 fortemente anti-persistente; variance-slope corrigido (lag real) elimina o H=4.83 impossivel.",
+    "source": "formal-certification/experiments/fct_phase_transition_audit.py"
+  },
+  "proof": {
+    "artifacts": [
+      "formal-certification/experiments/fct_phase_transition_audit.py",
+      "formal-certification/experiments/out_fct_audit.json",
+      "formal-certification/experiments/out_fct_rho_sweep.csv",
+      "formal-certification/tests/test_fct_audit.py"
+    ],
+    "note": "Derivação analítica fechada (break-even e meia-mitigaç��o, dois modelos PFA) + sweep numérico rho 0.01-0.99 + 4 estimadores H (Higuchi, R/S, DFA, variance-lag corrigido) + box-dim 2D + Donoho surrogate determinístico sobre cpu_timeseries.csv"
+  },
+  "verification": {
+    "method": "Execução determinística da auditoria + pytest 5 testes (travessias analítico×numérico, rho_c 0.25 refutado como break-even, H em (0,1), sweep monotônico)",
+    "tool": "python",
+    "command": "python formal-certification/experiments/fct_phase_transition_audit.py && python -m pytest formal-certification/tests/test_fct_audit.py -v",
+    "result": "pass",
+    "output": "formal-certification/experiments/out_fct_audit.json"
+  },
+  "meta_verification": {
+    "method": "pytest independente reexecuta a ferramenta e reconfere artefatos congelados",
+    "tool": "python",
+    "command": "python -m pytest formal-certification/tests/test_fct_audit.py -v",
+    "result": "pass",
+    "output": "formal-certification/experiments/out_fct_audit.json"
+  },
+  "external_certification": {
+    "auditor": "pendente",
+    "status": "pending",
+    "reference": ""
+  },
+  "confidence": {
+    "empirical": 0.7,
+    "statistical": 0.65,
+    "logical": 0.95,
+    "formal": 0.5
+  }
+}

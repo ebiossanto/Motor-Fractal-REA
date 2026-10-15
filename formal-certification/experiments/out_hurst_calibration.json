@@ -1,0 +1,91 @@
+{
+  "questao": "Qual estimador H é confiável sob spikes/platô? Correção do H real.",
+  "semente": 7,
+  "N_sintetico": 300,
+  "H_grid": [
+    0.2,
+    0.3,
+    0.35,
+    0.5,
+    0.7
+  ],
+  "calibracao_por_estimador": {
+    "higuchi": {
+      "bias_medio_real_like": -0.2923195746328542,
+      "mae_global": 0.2972477439533265,
+      "n_validos": 11
+    },
+    "rs": {
+      "bias_medio_real_like": 0.4718842470753035,
+      "mae_global": 0.33835035330166463,
+      "n_validos": 20
+    },
+    "dfa": {
+      "bias_medio_real_like": 0.8566273315379208,
+      "mae_global": 0.5493980129674363,
+      "n_validos": 20
+    },
+    "varlag": {
+      "bias_medio_real_like": -0.25163813235897015,
+      "mae_global": 0.29626152426442637,
+      "n_validos": 13
+    },
+    "box2d": {
+      "bias_medio_real_like": 0.6357924589909605,
+      "mae_global": 0.6569976215369049,
+      "n_validos": 20
+    }
+  },
+  "ranking_robustez": [
+    "varlag",
+    "higuchi",
+    "rs",
+    "dfa",
+    "box2d"
+  ],
+  "H_real_corrigido": {
+    "raw": {
+      "brutos": {
+        "higuchi": 0.21666228994758785,
+        "rs": 0.9101498950555752,
+        "dfa": 1.2739160981099424,
+        "box2d": 0.9437856946717307,
+        "varlag": 0.26121477530265874
+      },
+      "corrigidos": {
+        "higuchi": 0.508981864580442,
+        "rs": 0.4382656479802717,
+        "dfa": 0.41728876657202163,
+        "box2d": 0.3079932356807702,
+        "varlag": 0.5128529076616288
+      },
+      "consenso_corrigido": 0.4382656479802717
+    },
+    "donoho": {
+      "brutos": {
+        "higuchi": 0.5933315080115249,
+        "rs": 1.0176124279788004,
+        "dfa": 1.2251805026612315,
+        "box2d": 0.7300964924189407,
+        "varlag": 0.3365743671461414
+      },
+      "corrigidos": {
+        "higuchi": 0.8856510826443791,
+        "rs": 0.5457281809034968,
+        "dfa": 0.36855317112331065,
+        "box2d": 0.09430403342798022,
+        "varlag": 0.5882124995051116
+      },
+      "consenso_corrigido": 0.5457281809034968
+    }
+  },
+  "veredito": "Ranking: varlag, higuchi, rs, dfa, box2d. H raw corrigido=0.4382656479802717, Donoho corrigido=0.5457281809034968. Estimadores com MAE alto/DFA inválido são declarados frágeis em dado espiculado — o consenso usa só válidos em (0,1) após correção de viés.",
+  "reprodutibilidade": {
+    "comando": "python formal-certification/experiments/hurst_estimator_calibration.py",
+    "semente": "RandomState(7) fixa",
+    "saidas": [
+      "out_hurst_calibration.json",
+      "out_hurst_calibration.csv"
+    ]
+  }
+}

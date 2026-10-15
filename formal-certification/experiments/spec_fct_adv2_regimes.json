@@ -1,0 +1,42 @@
+{
+  "project": "IA-RESEARCH-FCT",
+  "claim": {
+    "id": "FCT-ADV-002",
+    "statement": "Tracker rho(t) na telemetria real (n=300): rho_global=0.272, P99=100.0; 53 episodios acima do break-even A (0.0625), 21 acima de 0.25, 9 acima do break-even B (0.706); rho_global recomenda PFA nos modelos A/doc e DFA no modelo B — sem fixar o modelo PFA nao ha recomendacao unica.",
+    "source": "formal-certification/experiments/fct_rho_regime_tracker.py"
+  },
+  "proof": {
+    "artifacts": [
+      "formal-certification/experiments/fct_rho_regime_tracker.py",
+      "formal-certification/experiments/out_fct_rho_regimes.json",
+      "formal-certification/experiments/out_fct_rho_series.csv",
+      "formal-certification/tests/test_fct_adv2_adv3.py"
+    ],
+    "note": "Episodios por limiar, dwell times, fracao acima, P99 e inflacoes DFA/PFA em rho_global; serie rho(t) congelada por amostra"
+  },
+  "verification": {
+    "method": "Execucao deterministica + pytest (episodios, coerencia fracao×limiar, 300 linhas CSV)",
+    "tool": "python",
+    "command": "python formal-certification/experiments/fct_rho_regime_tracker.py && python -m pytest formal-certification/tests/test_fct_adv2_adv3.py -v",
+    "result": "pass",
+    "output": "formal-certification/experiments/out_fct_rho_regimes.json"
+  },
+  "meta_verification": {
+    "method": "pytest independente reexecuta a ferramenta e reconfere saidas congeladas",
+    "tool": "python",
+    "command": "python -m pytest formal-certification/tests/test_fct_adv2_adv3.py -v",
+    "result": "pass",
+    "output": "formal-certification/experiments/out_fct_rho_regimes.json"
+  },
+  "external_certification": {
+    "auditor": "pendente",
+    "status": "pending",
+    "reference": ""
+  },
+  "confidence": {
+    "empirical": 0.7,
+    "statistical": 0.6,
+    "logical": 0.9,
+    "formal": 0.5
+  }
+}
