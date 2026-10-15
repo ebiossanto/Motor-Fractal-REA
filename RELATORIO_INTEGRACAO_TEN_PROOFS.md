@@ -266,3 +266,22 @@ certificados verificados 9/9 (nível 4 segue `pending`, sem auditor externo):
 
 Detalhes: `formal-certification/docs/QUESTAO_RHO_C_H_REAL.md`,
 `QUESTAO_RHO_REGIMES.md`, `QUESTAO_CALIBRACAO_HURST.md`.
+
+## 14/10/2026 (parte 2) — Avanços FCT-ADV-004, FCT-ADV-005 + correção §2.4
+
+1. **FCT-ADV-004** — Box-dim com bins adaptativos (quantis, k=2..12):
+   **5/6 resgatados** (raw 1D 0.86/2D 1.65, donoho 2D 1.24, tail 0.77/1.04);
+   donoho-1D D=1.0/R2=1.0 exatos = saturação trivial (marcada, não conta).
+   D2 reabilitado como auxiliar onde resgatado; onde não, segue só-H.
+   (`certificate_fct_adv4.json` `1f1f4687…`, 9/9)
+2. **FCT-ADV-005** — sweep phi_len 6,7,8,9,10,**12** (phi=12 inédito, 288/288
+   válidos): séries theta binárias → H≈0.004 idêntico = resíduo degenerado;
+   H legado 0.297→0.409 é de pipeline sem script sobrevivente → (H);
+   travessia phi=5 como "sinal" **retirada (R)**; Spearman **0/48** → D4 sem
+   suporte, pendente. (`certificate_fct_adv5.json` `d0f25073…`, 11/11)
+3. **Correção §2.4** de `FCT_REFINAMENTO_PREDITIVO.md`: 0.25 reclassificado
+   como meia-mitigaç��o do Modelo A; break-even 0.0625 (A) / 0.7063 (B);
+   interpretação por modelo (commit separado, mesmo branch).
+
+Detalhes: `formal-certification/docs/QUESTAO_BOXDIM_ADAPTATIVO.md`,
+`QUESTAO_F3_PHILEN_SPEARMAN.md`.

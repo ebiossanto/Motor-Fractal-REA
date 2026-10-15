@@ -60,16 +60,32 @@ Para o PFA ótimo $M^*$ (com $p = 1/2$):
 
 $$\mathcal{M}(M^*) = \frac{\frac{\rho}{1-\rho} \cdot \left(\frac{1}{6}\right)^2 - \frac{\sqrt{\rho}}{1-\rho} \cdot \left(\frac{1}{12}\right)^2}{\frac{\rho}{1-\rho} \cdot \left(\frac{1}{6}\right)^2} = 1 - \frac{\sqrt{\rho}}{4\rho}$$
 
-### 2.4 Ponto de Transição de Fase
+### 2.4 Ponto de Transição de Fase (corrigido em 14/10/2026 — FCT-AUDIT-001)
 
-Existe um valor crítico $\rho_c$ onde o PFA se torna vantajoso:
+> **Correção:** a versão anterior afirmava `ρ_c = 1/4 = 0.25` como "ponto onde
+> o PFA se torna vantajoso". Sob as próprias fórmulas deste documento isso é
+> falso: 0.25 é o ponto de **meia-mitigaç��o** (`M = 0.5`), não o break-even.
+> Há ainda **dois modelos PFA** em circulação que precisam ser distinguidos
+> (ver `formal-certification/docs/QUESTAO_RHO_C_H_REAL.md` e certificado
+> `certificate_fct_audit.json` `4e79d5b2…`, verificação 9/9).
 
-$$\rho_c = \frac{1}{4} = 0.25$$
+**Modelo A** (este documento, `E_pfa = 1/12` absoluto):
 
-**Interpretação:**
-- $\rho < 0.25$: DFA é suficiente (erros são absorvidos)
-- $\rho > 0.25$: PFA é necessário (erros se acumulam)
-- $\rho \to 1$: PFA fornece melhoria de $100\times$ ou mais
+- Break-even (`P99^DFA = P99^PFA`): `√ρ = (E_pfa/p)² = 1/4` ⟹
+  $$\rho_{be}^{(A)} = \frac{1}{16} = 0.0625$$
+- Meia-mitigaç��o (`M = 0.5`): `1 − 1/(4√ρ) = 1/2` ⟹
+  $$\rho_{1/2}^{(A)} = \frac{1}{4} = 0.25$$
+
+**Modelo B** (artefatos `gk_D1/gk_F1`, `E_pfa = p(1−r)`, `r = 1/12`):
+
+- Break-even: `√ρ = (1−r)²` ⟹
+  $$\rho_{be}^{(B)} = (1-r)^4 = \left(\frac{11}{12}\right)^4 \approx 0.7063$$
+
+**Interpretação corrigida (fixar um modelo antes de operar):**
+- Modelo A: `ρ < 0.0625` DFA suficiente; `0.0625 < ρ < 0.25` PFA vantajoso com
+  mitigação < 50%; `ρ > 0.25` PFA com mitigação > 50%.
+- Modelo B: `ρ < 0.706` DFA suficiente; `ρ > 0.706` PFA necessário.
+- `ρ → 1`: PFA fornece melhoria de $100\times$ ou mais (mantido).
 
 ---
 
