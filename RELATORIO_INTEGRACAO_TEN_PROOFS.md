@@ -285,15 +285,3 @@ Detalhes: `formal-certification/docs/QUESTAO_RHO_C_H_REAL.md`,
 
 Detalhes: `formal-certification/docs/QUESTAO_BOXDIM_ADAPTATIVO.md`,
 `QUESTAO_F3_PHILEN_SPEARMAN.md`.
-
-## 15/10/2026 — Teorema TD + LB1/LB2 (FCT-ADV-006, primeiro teorema novo)
-
-Enunciado, prova e checagem por máquina em
-`formal-certification/docs/TEOREMA_TRANSICAO_DUPLA.md` (condicional às
-fórmulas-ponte (A); nível 4 `pending`):
-- **T1:** `ρ* = q⁴`, `ρ_1/2 = 4q⁴`, razão 4, existência iff `q < 1/√2`;
-  A: (1/16, 1/4); B: (0.7063, 2.82 inatingível; **cap 23/144 ≈ 0.16** — novo).
-- **LB1:** `M(ρ) ≥ 1 − q²/√ρ₀` (reabilita 0.25 como limiar de garantia).
-- **LB2:** cascata `∏(1+a_k) ≥ 1+Σa_k` (indução) → bullwhip cresce ao menos
-  linearmente em `n`. **Non-claim:** nada de complexidade/L2→L3.
-(`certificate_fct_adv6.json` `f6e217cd…`, 9/9; `out_teorema_td.json` TUDO_OK)
