@@ -242,3 +242,27 @@ Risco de colapso por latência de cauda: ALTO sem mitigação, REDUZIDO com PFA
 *Este relatório foi gerado automaticamente como parte da cadeia de certificação Ten-Proofs Nível 2.
 Todas as afirmações têm artefatos associados com hashes SHA-256 verificáveis.
 A honestidade epistêmica é mantida: níveis não executados são explicitamente marcados como `pending`.*
+
+---
+
+## 14/10/2026 — Avanços FCT-AUDIT-001, FCT-ADV-002, FCT-ADV-003 (branch `formal-certification`)
+
+Três questões não respondidas foram fechadas em (P) com ferramentas novas,
+certificados verificados 9/9 (nível 4 segue `pending`, sem auditor externo):
+
+1. **FCT-AUDIT-001** — `ρ_c = 0.25` (§2.4) **não** é break-even em nenhum modelo:
+   é a meia-mitigaç��o do Modelo A. Break-even: **0.0625** (Modelo A, E_pfa absoluto),
+   **0.7063** (Modelo B, E_pfa relativo). Correção pendente no §2.4: distinguir
+   break-even × meia-mitigaç��o e fixar um modelo PFA.
+   (`certificate_fct_audit.json` `4e79d5b2…`)
+2. **FCT-ADV-002** — tracker `ρ(t)`: ρ_global = 0.272, P99 = 100.0; episódios acima:
+   BE-A **53**, 0.25 **21**, BE-B **9**. Recomendação depende do modelo (sem modelo
+   único não há decisão única — registrado honestamente).
+   (`certificate_fct_adv2.json` `9a10e4f8…`)
+3. **FCT-ADV-003** — calibração H com ground-truth ARFIMA: ranking
+   varlag > higuchi > rs > dfa > box2d; H real corrigido **raw 0.44** (cruza 0.35)
+   e **Donoho 0.55**. O "raw anti-persistente 0.26" era subestimação por spikes.
+   (`certificate_fct_adv3.json` `ee58b684…`)
+
+Detalhes: `formal-certification/docs/QUESTAO_RHO_C_H_REAL.md`,
+`QUESTAO_RHO_REGIMES.md`, `QUESTAO_CALIBRACAO_HURST.md`.
