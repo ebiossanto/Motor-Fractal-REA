@@ -1,0 +1,42 @@
+{
+  "project": "IA-RESEARCH-FCT",
+  "claim": {
+    "id": "FCT-ADV-006",
+    "statement": "Teorema TD: para q em (0,1), break-even unico rho*=q^4, meia-mitigacao unica rho_1/2=4q^4, razao 4, existencia iff q<1/sqrt(2) para a meia; instancias A (1/16, 1/4) e B (0.7063, inatingivel 2.82; cap 23/144~=0.16); LB1 M(rho)>=1-q^2/sqrt(rho0); LB2 prod(1+a_k)>=1+soma(a_k) com corolario cascata linear em n.",
+    "source": "formal-certification/docs/TEOREMA_TRANSICAO_DUPLA.md"
+  },
+  "proof": {
+    "artifacts": [
+      "formal-certification/docs/TEOREMA_TRANSICAO_DUPLA.md",
+      "formal-certification/experiments/teorema_transicao_dupla_check.py",
+      "formal-certification/experiments/out_teorema_td.json",
+      "formal-certification/tests/test_teorema_td.py"
+    ],
+    "note": "Provas dedutivas no doc (derivada, unicidade por monotonicidade, inducao LB2); checker sympy exato + grade 2000x2x6 + 3000 grades seed 11"
+  },
+  "verification": {
+    "method": "Execucao deterministica + pytest 5 testes (T1 simbolico, LB1 sem violacao, LB2 exato+numerico)",
+    "tool": "python",
+    "command": "python formal-certification/experiments/teorema_transicao_dupla_check.py && python -m pytest formal-certification/tests/test_teorema_td.py -v",
+    "result": "pass",
+    "output": "formal-certification/experiments/out_teorema_td.json"
+  },
+  "meta_verification": {
+    "method": "pytest independente reexecuta o checker e reconfere saida congelada",
+    "tool": "python",
+    "command": "python -m pytest formal-certification/tests/test_teorema_td.py -v",
+    "result": "pass",
+    "output": "formal-certification/experiments/out_teorema_td.json"
+  },
+  "external_certification": {
+    "auditor": "pendente",
+    "status": "pending",
+    "reference": ""
+  },
+  "confidence": {
+    "empirical": 0.5,
+    "statistical": 0.5,
+    "logical": 0.95,
+    "formal": 0.5
+  }
+}

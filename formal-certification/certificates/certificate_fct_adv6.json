@@ -1,0 +1,93 @@
+{
+  "schema": "ten-proofs-certificate/v1",
+  "project": "IA-RESEARCH-FCT",
+  "niveis": {
+    "0_proposicao": {
+      "id": "FCT-ADV-006",
+      "statement": "Teorema TD: para q em (0,1), break-even unico rho*=q^4, meia-mitigacao unica rho_1/2=4q^4, razao 4, existencia iff q<1/sqrt(2) para a meia; instancias A (1/16, 1/4) e B (0.7063, inatingivel 2.82; cap 23/144~=0.16); LB1 M(rho)>=1-q^2/sqrt(rho0); LB2 prod(1+a_k)>=1+soma(a_k) com corolario cascata linear em n.",
+      "source": {
+        "path": "formal-certification/docs/TEOREMA_TRANSICAO_DUPLA.md",
+        "sha256": "ff990e78afcb4524789ede27e988715f77775e6b857c8e174ec07e9eca6a66a8",
+        "bytes": 6045,
+        "status": "registrado"
+      },
+      "status": "registrado"
+    },
+    "1_prova": {
+      "artifacts": [
+        {
+          "path": "formal-certification/docs/TEOREMA_TRANSICAO_DUPLA.md",
+          "sha256": "ff990e78afcb4524789ede27e988715f77775e6b857c8e174ec07e9eca6a66a8",
+          "bytes": 6045,
+          "status": "registrado"
+        },
+        {
+          "path": "formal-certification/experiments/teorema_transicao_dupla_check.py",
+          "sha256": "e48cff78bb8919c68186d69e12022e1c85bd6815db6ec5b5bf8f5ec8e3bd7a95",
+          "bytes": 3963,
+          "status": "registrado"
+        },
+        {
+          "path": "formal-certification/experiments/out_teorema_td.json",
+          "sha256": "4510c90286ec1147aa6293f5a0a427d7a0d8dc2d62f3eae8a5fd97666d9c5549",
+          "bytes": 792,
+          "status": "registrado"
+        },
+        {
+          "path": "formal-certification/tests/test_teorema_td.py",
+          "sha256": "130b79c9a7c37aaa51c3c85aa7de79770d723310b355d14cd50fa836f75f9419",
+          "bytes": 1195,
+          "status": "registrado"
+        }
+      ],
+      "note": "Provas dedutivas no doc (derivada, unicidade por monotonicidade, inducao LB2); checker sympy exato + grade 2000x2x6 + 3000 grades seed 11",
+      "status": "registrado"
+    },
+    "2_verificacao": {
+      "method": "Execucao deterministica + pytest 5 testes (T1 simbolico, LB1 sem violacao, LB2 exato+numerico)",
+      "tool": "python",
+      "command": "python formal-certification/experiments/teorema_transicao_dupla_check.py && python -m pytest formal-certification/tests/test_teorema_td.py -v",
+      "result": "pass",
+      "output": {
+        "path": "formal-certification/experiments/out_teorema_td.json",
+        "sha256": "4510c90286ec1147aa6293f5a0a427d7a0d8dc2d62f3eae8a5fd97666d9c5549",
+        "bytes": 792,
+        "status": "registrado"
+      },
+      "status": "registrado"
+    },
+    "3_meta_verificacao": {
+      "method": "pytest independente reexecuta o checker e reconfere saida congelada",
+      "tool": "python",
+      "command": "python -m pytest formal-certification/tests/test_teorema_td.py -v",
+      "result": "pass",
+      "output": {
+        "path": "formal-certification/experiments/out_teorema_td.json",
+        "sha256": "4510c90286ec1147aa6293f5a0a427d7a0d8dc2d62f3eae8a5fd97666d9c5549",
+        "bytes": 792,
+        "status": "registrado"
+      },
+      "status": "registrado"
+    },
+    "4_certificacao_externa": {
+      "auditor": "pendente",
+      "status": "pending",
+      "reference": ""
+    }
+  },
+  "confidence": {
+    "empirical": 0.5,
+    "statistical": 0.5,
+    "logical": 0.95,
+    "formal": 0.5
+  },
+  "generator": {
+    "tool": "certifier_core.py",
+    "version": "1.0.0"
+  },
+  "timestamp_utc": "2026-10-15T03:06:04+00:00",
+  "avisos": [
+    "espectro fora da hipótese de ordem δ ≥ γ ≥ β ≥ ρ (recebido ρ=0.5, β=0.5, γ=0.95, δ=0.5)"
+  ],
+  "certificate_hash": "f6e217cdcd1286f88524b5775347c7b741e294abd3ea258fd7139c4ebd724330"
+}
