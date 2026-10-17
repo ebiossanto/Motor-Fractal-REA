@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "script": "nt05_tendencia.py",
+    "rho": 0.7,
+    "alpha": 1.5,
+    "p_relax": 0.0,
+    "sizes": [
+      2000,
+      5000,
+      20000
+    ],
+    "timestamp": "2026-10-13"
+  },
+  "results": [
+    {
+      "n": 2000,
+      "P99_simulated": 593.2077584467039,
+      "P99_predicted": 1233.892681872279,
+      "relative_error_pct": 108.00346325597437
+    },
+    {
+      "n": 5000,
+      "P99_simulated": 1327.6045969833563,
+      "P99_predicted": 779.300641182492,
+      "relative_error_pct": 41.30024534765438
+    },
+    {
+      "n": 20000,
+      "P99_simulated": 5150.092397911525,
+      "P99_predicted": 389.650320591246,
+      "relative_error_pct": 92.43411009967011
+    }
+  ],
+  "output_hash": "7bb43c5d"
+}

@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "script": "nt05_grid.py",
+    "rho": 0.7,
+    "alpha": 1.5,
+    "p_relax": 0.0,
+    "approach": "A2-AR1",
+    "sizes": [
+      2000,
+      5000,
+      20000,
+      100000
+    ],
+    "timestamp": "2026-10-13"
+  },
+  "results": [
+    {
+      "n": 2000,
+      "P99_simulated": 247.07610440250244,
+      "P99_predicted": 38965.0320591246,
+      "relative_error_pct": 15670.457508771515,
+      "elapsed_s": 0.36565303802490234,
+      "n_errors": 674
+    },
+    {
+      "n": 5000,
+      "P99_simulated": 1348.1539746666444,
+      "P99_predicted": 24643.650081662887,
+      "relative_error_pct": 1727.9551553268589,
+      "elapsed_s": 0.015623331069946289,
+      "n_errors": 1718
+    },
+    {
+      "n": 20000,
+      "P99_simulated": 5008.089885961185,
+      "P99_predicted": 12321.825040831443,
+      "relative_error_pct": 146.03841627068877,
+      "elapsed_s": 0.06219744682312012,
+      "n_errors": 6693
+    },
+    {
+      "n": 100000,
+      "P99_simulated": 19749.182583692218,
+      "P99_predicted": 5510.487679631647,
+      "relative_error_pct": 72.09764173134992,
+      "elapsed_s": 0.2601807117462158,
+      "n_errors": 31973
+    }
+  ],
+  "output_hash": "7f476fe86a7ec94f"
+}

@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "script": "nt05_grid_refinado.py",
+    "rho": 0.7,
+    "alpha": 1.5,
+    "p_relax": 0.0,
+    "approach": "A2-AR1-com-P99_ideal-empirico",
+    "sizes": [
+      2000,
+      5000,
+      20000,
+      100000
+    ],
+    "timestamp": "2026-10-13"
+  },
+  "results": [
+    {
+      "n": 2000,
+      "P99_simulated": 280.34491636132657,
+      "P99_predicted": 121.79699478342097,
+      "relative_error_pct": 56.55459126412652,
+      "elapsed_s": 0.0,
+      "n_errors": 697
+    },
+    {
+      "n": 5000,
+      "P99_simulated": 1404.1058959822287,
+      "P99_predicted": 118.44831958099853,
+      "relative_error_pct": 91.56414627130818,
+      "elapsed_s": 0.02921009063720703,
+      "n_errors": 1742
+    },
+    {
+      "n": 20000,
+      "P99_simulated": 5248.798445295379,
+      "P99_predicted": 1164.6165734444078,
+      "relative_error_pct": 77.81174900155901,
+      "elapsed_s": 0.0468745231628418,
+      "n_errors": 6814
+    },
+    {
+      "n": 100000,
+      "P99_simulated": 19580.07940111734,
+      "P99_predicted": 906.2436173748855,
+      "relative_error_pct": 95.37160397151825,
+      "elapsed_s": 0.27567076683044434,
+      "n_errors": 31876
+    }
+  ],
+  "output_hash": "770d4dd059987120"
+}

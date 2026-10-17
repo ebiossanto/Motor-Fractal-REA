@@ -1,0 +1,75 @@
+{
+  "certificate_id": "nt03_bridge_proof_v1",
+  "level": 1,
+  "version": "ten-proofs-certificate/v1",
+  "timestamp": "2026-10-13T00:00:00Z",
+  "author": "Euzébio Soares",
+  "statement": "Teorema 1: Ponte Analítica DFA para P99 em M/G/1-Pareto com obstrução Z₂³. Fórmula: P99 = P99_ideal × [1 + Φ(ρ) · (E* · Λ(ρ))^β] com parâmetros calibrados (δ=2.0, κ=0.3, γ=1.0, β=1.34, E*=1/6, ξ=0.2). Erro empírico médio 3.6% (mediana 4.1%) em ρ∈{0.5,0.7,0.9}, α=1.5, seed=42.",
+  "proof_hash": "sha256:pending_lean_formalization",
+  "reproduction": {
+    "command": "python src/python/nt02_calibration_fast.py",
+    "seed": 42,
+    "n_samples": 200000,
+    "warmup": 5000,
+    "expected_hash": "640631646eb46d82"
+  },
+  "evidence": [
+    {
+      "type": "document",
+      "path": "formal-certification/docs/NT-03_PROVA_FORMAL.md",
+      "description": "Prova formal estruturada em 5 lemas + teorema principal"
+    },
+    {
+      "type": "code",
+      "path": "src/python/nt02_calibration_fast.py",
+      "description": "Calibração empírica vetorizada (DFA erro 3.6%)"
+    },
+    {
+      "type": "data",
+      "path": "experiments/nt02_calibration_results.json",
+      "description": "Resultados brutos com hash SHA256: 640631646eb46d82"
+    },
+    {
+      "type": "document",
+      "path": "formal-certification/docs/NT-02_MODELO_CANONICO_CORRIGIDO.md",
+      "description": "Modelo canônico calibrado com parâmetros finais"
+    },
+    {
+      "type": "code",
+      "path": "scripts/fractal_engine.py",
+      "description": "Motor Fractal para validação Hurst analítica"
+    }
+  ],
+  "confidence": {
+    "rho": 0.95,
+    "beta": 0.85,
+    "gamma": 0.8,
+    "delta": 0.7
+  },
+  "dependencies": [
+    {
+      "ref": "zwart2000tail",
+      "statement": "Lema 1: Assintótico M/G/1-Pareto (Zwart & Boxma 2000)"
+    },
+    {
+      "ref": "soares2026fct1",
+      "statement": "Lema 2: Obstrução algébrica Z₂³ → E*=1/6 (FCT Eixo 1)"
+    },
+    {
+      "ref": "soares2026costeq",
+      "statement": "Retificação β=1.34, saturação ρ, multi-hop aditivo"
+    }
+  ],
+  "limitations": [
+    "Validação apenas para α=1.5, ρ∈[0.5,0.9], n=200k",
+    "Modelo PFA não validado (requer NT-04 com decorrelação)",
+    "Formalização Lean 4 pendente (proof_hash = pending)",
+    "Traces reais não testados (requer NT-05)"
+  ],
+  "next_steps": [
+    "Emitir certificado Nível 2 (Verificação: reprodução assinada)",
+    "NT-04: Modelo PFA com decorrelação de erros",
+    "NT-05: Validação em traces Azure/Google",
+    "Formalização Lean 4 completa para proof_hash"
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "base_config": {
+    "sim": {
+      "seed": 42,
+      "rho": 0.7,
+      "alpha": 1.5,
+      "n_samples": 200000,
+      "warmup": 5000,
+      "batch_size": 50000
+    },
+    "fct": {
+      "E_dynamic": 0.16666666666666666,
+      "E_static": 0.08333333333333333,
+      "beta": 1.34,
+      "rho_saturation": true,
+      "delta_sat": 2.0,
+      "kappa_load": 0.3,
+      "gamma_load": 1.0,
+      "xi_hurst": 0.2,
+      "pfa_enabled": false,
+      "pfa_relax_prob": 0.3,
+      "pfa_beta_reduction": 0.5,
+      "n_hops": 1,
+      "hop_correlation": 0.0
+    }
+  },
+  "calibration_results": [
+    {
+      "rho": 0.5,
+      "alpha": 1.5,
+      "p_relax": 0.0,
+      "P99_simulated": 1650.1806719054816,
+      "P99_predicted": 1581.8625105954882,
+      "H_rs": 0.6375,
+      "H_dfa": 0.6375,
+      "relative_error_pct": 4.140041298090453,
+      "p_controller": 0.2047463744644549,
+      "inflation_factor": 0.09093966247964697
+    },
+    {
+      "rho": 0.5,
+      "alpha": 1.5,
+      "p_relax": 0.5,
+      "P99_simulated": 1607.2667050047032,
+      "P99_predicted": 1751.491446509958,
+      "H_rs": 0.6375,
+      "H_dfa": 0.6375,
+      "relative_error_pct": 8.973292425965655,
+      "p_controller": 0.14403985389889412,
+      "inflation_factor": 0.20792513552410888
+    },
+    {
+      "rho": 0.7,
+      "alpha": 1.5,
+      "p_relax": 0.0,
+      "P99_simulated": 3463.0202537755986,
+      "P99_predicted": 3481.4666585476366,
+      "H_rs": 0.5925,
+      "H_dfa": 0.5925,
+      "relative_error_pct": 0.5326681168533915,
+      "p_controller": 0.21573507073215997,
+      "inflation_factor": 0.16048888618254564
+    },
+    {
+      "rho": 0.7,
+      "alpha": 1.5,
+      "p_relax": 0.5,
+      "P99_simulated": 2780.952946751153,
+      "P99_predicted": 4052.418735447951,
+      "H_rs": 0.5925,
+      "H_dfa": 0.5925,
+      "relative_error_pct": 45.72050707230366,
+      "p_controller": 0.14953420203274664,
+      "inflation_factor": 0.35080624514931696
+    },
+    {
+      "rho": 0.9,
+      "alpha": 1.5,
+      "p_relax": 0.0,
+      "P99_simulated": 55616.98067347928,
+      "P99_predicted": 58983.43051623528,
+      "H_rs": 0.5475,
+      "H_dfa": 0.5475,
+      "relative_error_pct": 6.052917296104281,
+      "p_controller": 0.21666666514366872,
+      "inflation_factor": 0.22882146908823514
+    },
+    {
+      "rho": 0.9,
+      "alpha": 1.5,
+      "p_relax": 0.5,
+      "P99_simulated": 31580.324990547007,
+      "P99_predicted": 71919.8105997475,
+      "H_rs": 0.5475,
+      "H_dfa": 0.5475,
+      "relative_error_pct": 127.73613197861448,
+      "p_controller": 0.14999999923850102,
+      "inflation_factor": 0.4983293874947399
+    }
+  ],
+  "metadata": {
+    "script": "nt02_calibration_fast.py",
+    "seed": 42,
+    "hurst_method": "analytical_pareto_mg1",
+    "timestamp": "2026-10-13",
+    "note": "DFA excelente (<7% erro). PFA requer modelo de decorrelacao na simulacao.",
+    "output_hash": "640631646eb46d82"
+  }
+}
